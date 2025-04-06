@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ sidebarOpen: false }" x-cloak>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acrylic UI - Use Cases</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/cubes.png');
+      opacity: 0.04;
+      z-index: -1;
+    }
+    [x-cloak] { display: none; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-100 to-blue-300 text-blue-900">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 z-30 w-full bg-white/30 backdrop-blur-md shadow-md border-b border-white/20 px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-4">
+      <!-- Menu Button -->
+      <button @click="sidebarOpen = !sidebarOpen" class="md:hidden text-blue-800 focus:outline-none">
+        ☰
+      </button>
+      <h1 class="text-2xl font-bold">AcrylicUI</h1>
+    </div>
+    <nav class="space-x-4 hidden md:block">
+      <a href="#" class="hover:underline text-blue-800">Home</a>
+      <a href="#" class="hover:underline text-blue-800">Features</a>
+      <a href="#" class="hover:underline text-blue-800">Contact</a>
+    </nav>
+  </header>
+
+  <div class="flex pt-20 min-h-screen" x-data>
+    <!-- Sidebar -->
+    <!-- <aside
+      class="fixed md:static top-0 left-0 h-full w-64 bg-white/30 backdrop-blur-md border-r border-white/20 p-6 transition-transform duration-300 z-20"
+      :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'"
+    >
+      <nav class="space-y-4 mt-16 md:mt-0">
+        <a href="#" class="block text-blue-800 font-medium hover:underline">🏠 Dashboard</a>
+        <a href="#" class="block text-blue-800 font-medium hover:underline">📄 Reports</a>
+        <a href="#" class="block text-blue-800 font-medium hover:underline">⚙️ Settings</a>
+        <a href="#" class="block text-blue-800 font-medium hover:underline">📧 Messages</a>
+      </nav>
+    </aside> -->
+
+    <!-- Main Content -->
+    <main class="flex-1 px-4 py-10 md:py-12 md:px-10 transition-all">
+      <div class="w-full max-w-6xl mx-auto p-6 backdrop-blur-md bg-white/30 border border-white/20 rounded-2xl shadow-2xl">
+        <h2 class="text-3xl font-bold text-center mb-6">✨ Acrylic Board Use Cases</h2>
+        <p class="text-center text-blue-800 mb-10 text-lg">
+          Explore how acrylic boards are used in various fields.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Card 1 -->
+           <a href="office.html">
+            <div class="bg-white/20 rounded-xl border border-white/10 shadow-inner 
+            transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1">
+                      <img src="./assest/office.jpeg" width="full"  alt="Office Signage" class="rounded-t-xl object-cover">
+                      <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">🏢 Office Signage</h3>
+                        <p class="text-blue-700 mb-4">Acrylic boards are widely used for creating professional, clean office signboards and directories with logo etching.</p>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Gallery</button>
+                      </div>
+                    </div>
+            </a>
+ 
+
+          <!-- Card 2 -->
+          <a href="direction.html">
+            <div class="bg-white/20 rounded-xl border border-white/10 shadow-inner 
+            transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1">
+                      <img src="https://www.alphasigns.in/img/photo/Directional%20Sign%20Board.jpg"  alt="Direction Sign Board" class="rounded-t-xl ">
+                      <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Direction Sign Board</h3>
+                        <p class="text-blue-700 mb-4">Directional acrylic sign boards are essential for guiding visitors efficiently through large spaces. These boards can be wall-mounted, free-standing, or ceiling-hung and typically include arrows, icons, and clear labeling.
+                    <br>
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">See Styles</button>
+                      </div>
+                    </div>
+          </a>
+
+          <!-- Card 3 -->
+           <a href="neon.html">
+            <div class="bg-white/20 rounded-xl border border-white/10 shadow-inner 
+            transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1 ">
+            <img src="./assest/neonsign.jpeg" alt="Retail Display" class="w-full object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Neon Sign Boards</h3>
+              <p class="text-blue-700 mb-4">  Neon sign boards are vibrant, eye-catching, and perfect for adding personality to any space. Whether you're branding a retail store, lighting up a café, or decorating a home or event, custom neon signs made with LED technology offer stunning visuals and energy efficiency.
+            </p>
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Explore Ideas</button>
+            </div>
+          </div>
+           </a>
+
+          <!-- Card 4 -->
+           <a href="led.html">
+            <div class="bg-white/20 rounded-xl border border-white/10 shadow-inner 
+            transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1">
+        <img src="./assest/LED.jpeg" alt="Awards and Trophies" class="w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">LED Acrylic Board</h3>
+          <p class="text-blue-700 mb-4">  LED acrylic boards combine modern design with brilliant illumination, making them ideal for creating standout signage. These boards use high-quality LED lighting embedded into precision-cut acrylic sheets to deliver vibrant, energy-efficient displays that capture attention both day and night.
+        </p>
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Browse Awards</button>
+        </div>
+      </div>
+           </a>
+
+      <a href="ss.html">
+        <div class="bg-white/20 rounded-xl border border-white/10 shadow-inner 
+        transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1 ">
+        <img src="./assest/neonsign.jpeg" alt="Retail Display" class="w-full object-cover">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Stainless Steel Sign Board</h3>
+          <p class="text-blue-700 mb-4">     
+              <ul class="list-disc pl-6 text-blue-700 mb-6">
+            <li>Premium brushed, mirror, matte, or satin finishes</li>
+            <li>Highly resistant to rust, corrosion, and weather damage</li>
+            <li>Precision-cut logos and letters using laser or CNC machines</li>
+            <li>Crafted from long-lasting SS 304/316 grades</li>
+            <li>Minimal maintenance and maximum elegance</li>
+          </ul>
+        </p>
+          <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Explore Ideas</button>
+        </div>
+      </div>
+      </a>
+      
+        <!-- Card 4 -->
+        <a href="metal.html">
+          <div class="bg-white/20 rounded-xl border border-white/10 shadow-inner 
+          transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1">
+              <img src="./assest/LED.jpeg" alt="Awards and Trophies" class="w-full object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2">Metal Letters</h3>
+        <p class="text-blue-700 mb-4">  LED acrylic boards combine modern design with brilliant illumination, making them ideal for creating standout signage. These boards use high-quality LED lighting embedded into precision-cut acrylic sheets to deliver vibrant, energy-efficient displays that capture attention both day and night.
+      </p>
+        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Browse Awards</button>
+             </div>
+             </div>
+        </a>
+
+        <a href="flex.html">
+          <div class="bg-white/20 rounded-xl border border-white/10 shadow-inner 
+          transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1 ">
+          <img src="./assest/neonsign.jpeg" alt="Retail Display" class="w-full object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Flex Board</h3>
+            <p class="text-blue-700 mb-4">     
+                <ul class="list-disc pl-6 text-blue-700 mb-6">
+              <li>Premium brushed, mirror, matte, or satin finishes</li>
+              <li>Highly resistant to rust, corrosion, and weather damage</li>
+              <li>Precision-cut logos and letters using laser or CNC machines</li>
+              <li>Crafted from long-lasting SS 304/316 grades</li>
+              <li>Minimal maintenance and maximum elegance</li>
+            </ul>
+          </p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Explore Ideas</button>
+          </div>
+        </div>
+        </a>
+
+        <a href="flex.html">
+          <div class="bg-white/20 rounded-xl border border-white/10 shadow-inner 
+          transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1 ">
+          <img src="./assest/neonsign.jpeg" alt="Retail Display" class="w-full object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Acrylic Name Plate</h3>
+            <p class="text-blue-700 mb-4">     
+                <ul class="list-disc pl-6 text-blue-700 mb-6">
+              <li>Premium brushed, mirror, matte, or satin finishes</li>
+              <li>Highly resistant to rust, corrosion, and weather damage</li>
+              <li>Precision-cut logos and letters using laser or CNC machines</li>
+              <li>Crafted from long-lasting SS 304/316 grades</li>
+              <li>Minimal maintenance and maximum elegance</li>
+            </ul>
+          </p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Explore Ideas</button>
+          </div>
+        </div>
+        </a> 
+
+        <a href="flex.html">
+          <div class="bg-white/20 rounded-xl border border-white/10 shadow-inner 
+          transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1 ">
+          <img src="./assest/neonsign.jpeg" alt="Retail Display" class="w-full object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">UV Prints and Eco Vinyl</h3>
+            <p class="text-blue-700 mb-4">     
+                <ul class="list-disc pl-6 text-blue-700 mb-6">
+              <li>Premium brushed, mirror, matte, or satin finishes</li>
+              <li>Highly resistant to rust, corrosion, and weather damage</li>
+              <li>Precision-cut logos and letters using laser or CNC machines</li>
+              <li>Crafted from long-lasting SS 304/316 grades</li>
+              <li>Minimal maintenance and maximum elegance</li>
+            </ul>
+          </p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Explore Ideas</button>
+          </div>
+        </div>
+        </a> 
+
+        <a href="flex.html">
+          <div class="bg-white/20 rounded-xl border border-white/10 shadow-inner 
+          transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-xl hover:-translate-y-1 ">
+          <img src="./assest/neonsign.jpeg" alt="Retail Display" class="w-full object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Trim Cap Letters</h3>
+            <p class="text-blue-700 mb-4">     
+                <ul class="list-disc pl-6 text-blue-700 mb-6">
+              <li>Premium brushed, mirror, matte, or satin finishes</li>
+              <li>Highly resistant to rust, corrosion, and weather damage</li>
+              <li>Precision-cut logos and letters using laser or CNC machines</li>
+              <li>Crafted from long-lasting SS 304/316 grades</li>
+              <li>Minimal maintenance and maximum elegance</li>
+            </ul>
+          </p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Explore Ideas</button>
+          </div>
+        </div>
+        </a> 
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-blue-700 py-6 bg-white/30 backdrop-blur-md border-t border-white/20">
+    © 2025 AcrylicUI. Built with ❤️ using Tailwind CSS & Alpine.js.
+  </footer>
+
+</body>
+</html>
